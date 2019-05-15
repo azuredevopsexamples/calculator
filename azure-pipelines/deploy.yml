@@ -10,7 +10,7 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: 'd0d99de5-3a19-4672-81d4-52d4d7520f7b'
+  dockerRegistryServiceConnection: '1ffba096-1c74-4214-90f5-a92b3a870a63'
   imageRepository: 'calculator'
   containerRegistry: 'devopsbuild2019.azurecr.io'
   dockerfilePath: '**/Dockerfile'
@@ -18,7 +18,7 @@ variables:
   
   # Kubernetes Namespace
   k8sNamespace: 'default'
-  imagePullSecret: 'devopsbuild201921a9-auth'
+  imagePullSecret: 'devopsbuild201981fe-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -55,7 +55,7 @@ stages:
     displayName: Deploy job
     pool:
       vmImage: $(vmImageName)
-    environment: 'calculator-1136.default'
+    environment: 'azuredevopsexamplescalculator.default'
     strategy:
       runOnce:
         deploy:
